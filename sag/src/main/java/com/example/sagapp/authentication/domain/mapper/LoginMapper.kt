@@ -28,7 +28,7 @@ object LoginMapper :BaseMapper<LoginDto,Login>{
     }
 
     override fun mapResponse(res: BaseResponse<LoginDto>): BaseResponse<Login> {
-        return BaseResponse(mapData(res.data)).apply {
+        return BaseResponse(mapData(LoginDto(res.data!!.cashPaymentDto,res.data!!.glassDto,res.data!!.StripePaymentDto,res.data!!.UserDto))).apply {
             status =res.status
             message =res.message
         }

@@ -1,11 +1,12 @@
 package com.example.sagapp.authentication.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sagapp.R
-import com.example.sagapp.authentication.data.local.entities.LoginParams
 import com.example.sagapp.authentication.ui.viewmodel.LoginViewModel
+import com.example.sagapp.ble.ui.BluetoothActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -14,6 +15,8 @@ class SetupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setup)
-        mViewModel.login(LoginParams("Hagar@gmail.com","123456"))
+//        mViewModel.login(LoginParams("Hagar@gmail.com","123456"))
+
+        startActivity(Intent(this, BluetoothActivity::class.java))
     }
 }

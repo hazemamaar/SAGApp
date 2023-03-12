@@ -1,8 +1,8 @@
 package com.example.core.base.usecase
 
-import android.util.Log
 import com.example.core.response.BaseCommonResponse
 import com.example.core.response.Resource
+import com.example.core.response.ServerStatusCodes
 import kotlinx.coroutines.*
 
 /**
@@ -21,7 +21,7 @@ in case we need extra data for our use case.
  */
 abstract class BaseRemoteUseCase<RequestType : BaseCommonResponse, ResultType : Any, in Params> :
     BaseCommonUseCase<RequestType, ResultType, Params>() {
-    fun invoke(
+    operator fun invoke(
         scope: CoroutineScope,
         params: Params? = null,
         onResult: (Resource<ResultType>) -> Unit = {}
@@ -29,9 +29,8 @@ abstract class BaseRemoteUseCase<RequestType : BaseCommonResponse, ResultType : 
         scope.launch(handler(onResult) + Dispatchers.Main) {
             onResult.invoke(Resource.loading())
             runFlow(executeRemote(params), onResult).collect {
-                Log.e("hazz",it.toString())
                 try {
-                    if (it.status == 200) {
+                    if (it.status == ServerStatusCodes.SUCCESS.code) {
                         val res = mapper(it)
                         onResult.invoke(Resource.success(res))
                     } else {
@@ -43,21 +42,6 @@ abstract class BaseRemoteUseCase<RequestType : BaseCommonResponse, ResultType : 
                         it.message
                     )
                 }
-//                when (it) {
-//                    is Resource.Success -> {
-//                        if (it.data.success == true
-//                        ) {
-//                            val res = mapper(it.data)
-//                            onResult.invoke(Resource.success(res))
-//                        } else {
-//                            showFailureMessage(onResult, it.data.message)
-//                        }
-//                    }
-//                    is Resource.Failure -> showFailureMessage(
-//                        onResult,
-//                        it.message
-//                    )
-//                }
                 onResult.invoke(Resource.loading(false))
             }
         }
