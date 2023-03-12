@@ -31,7 +31,7 @@ class LoginViewModel @Inject constructor(private val loginUseCase: LoginUseCase)
                           produce(LoginAction.Loading)
                 }
                 is Resource.Success -> {
-                    it.data.showLog("llllllllllll")
+                    it.data.showLog("sag")
                     produce(LoginAction.Success(it.data))
                 }
             }
