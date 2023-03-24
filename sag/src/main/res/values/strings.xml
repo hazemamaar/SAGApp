@@ -6,9 +6,20 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
     <string name="previous">Previous</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_activities">activities</string>
+    <string name="splash_title">SAG</string>
+
+
+    <string name="first_onboard_screen">How to use SAG</string>
+
+    <string name="first_onboard_page">Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry\'s standard </string>
+    <string name="second_onboard_page">Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry\'s standard</string>
+    <string name="third_onboard_page">Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry\'s standard</string>
+    <string name="skip_btn">SKIP</string>
+    <string name="next_btn">NEXT</string>
+
 </resources>
