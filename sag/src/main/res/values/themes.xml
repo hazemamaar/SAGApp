@@ -8,7 +8,6 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
@@ -22,4 +21,32 @@
     <style name="Theme.SAGApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.SAGApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="splash_title">
+        <item name="android:textSize">55dp</item>
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="first_onboard_screen">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="first_onboard_page_text">
+
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">17sp</item>
+
+    </style>
+
+    <style name="Button">
+        <item name="backgroundTint">@color/off_white</item>
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
 </resources>

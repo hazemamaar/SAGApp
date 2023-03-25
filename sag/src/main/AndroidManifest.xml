@@ -3,12 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
         android:usesPermissionFlags="neverForLocation" />
 
     <uses-feature android:name="android.hardware.bluetooth" />
+
     <application
         android:name=".common.daggerapp.HiltApplication"
         android:allowBackup="true"
@@ -20,23 +24,26 @@
         android:theme="@style/Theme.SAGApp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
         <activity
             android:name=".ble.ui.BluetoothActivity"
+            android:exported="false"
+            android:label="@string/title_activity_activities"
+            android:theme="@style/Theme.SAGApp.NoActionBar" />
+        <activity
+            android:name= ".welcome.ui.activities.SplashActivity"
             android:exported="true"
             android:label="@string/title_activity_bluetooth"
-            android:theme="@style/Theme.SAGApp.NoActionBar" >
+            android:theme="@style/Theme.SAGApp.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".authentication.ui.activities.SetupActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"></activity>
     </application>
 
 </manifest>

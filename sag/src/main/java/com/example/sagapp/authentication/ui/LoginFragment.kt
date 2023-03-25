@@ -9,7 +9,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class LoginFragment : BaseFragment<FragmentLoginBinding,LoginViewModel>() {
     override fun onFragmentReady() {
-        TODO("Not yet implemented")
+
     }
 
     override val mViewModel: LoginViewModel by viewModels()

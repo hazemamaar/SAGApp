@@ -1,18 +1,25 @@
 package com.example.sagapp.ble.ui
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.example.sagapp.R
 import com.example.sagapp.ble.domin.BluetoothDevice
+import com.example.sagapp.databinding.ItemBluetoothRvBinding
+import javax.inject.Inject
 
-class BluetoothListAdapter : RecyclerView.Adapter<BluetoothListAdapter.BluetoothViewHolder>() {
+class BluetoothListAdapter @Inject constructor() : RecyclerView.Adapter<BluetoothListAdapter.BluetoothViewHolder>() {
 
-    inner class BluetoothViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    inner class BluetoothViewHolder(private val binding:ItemBluetoothRvBinding) : RecyclerView.ViewHolder(binding.root){
+        fun bind(item: BluetoothDevice) {
+            binding.bluetoothName.text = item.name
+
+            binding.bluetoothName.setOnClickListener {
+                onItemClickListener?.let { it(item) }
+            }
+        }
+    }
 
     var bleDevices: List<BluetoothDevice>
         get() = differ.currentList
@@ -20,7 +27,7 @@ class BluetoothListAdapter : RecyclerView.Adapter<BluetoothListAdapter.Bluetooth
 
     private val differCallBack = object : DiffUtil.ItemCallback<BluetoothDevice>() {
         override fun areItemsTheSame(oldItem: BluetoothDevice, newItem: BluetoothDevice): Boolean {
-            return oldItem.url == newItem.url
+            return oldItem.hashCode() == newItem.hashCode()
         }
 
         override fun areContentsTheSame(
@@ -30,15 +37,11 @@ class BluetoothListAdapter : RecyclerView.Adapter<BluetoothListAdapter.Bluetooth
             return oldItem == newItem
         }
     }
-    val differ = AsyncListDiffer(this, differCallBack)
+    private val differ = AsyncListDiffer(this, differCallBack)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BluetoothViewHolder {
         return BluetoothViewHolder(
-            LayoutInflater.from(parent.context).inflate(
-                R.layout.item_bluetooth,
-                parent,
-                false
-            )
+            ItemBluetoothRvBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         )
     }
 
@@ -46,9 +49,8 @@ class BluetoothListAdapter : RecyclerView.Adapter<BluetoothListAdapter.Bluetooth
 
     override fun onBindViewHolder(holder: BluetoothViewHolder, position: Int) {
         val bleDevice = bleDevices[position]
-        holder.itemView.apply {
-
-
+        holder.apply {
+         bind(bleDevice)
         }
     }
 
