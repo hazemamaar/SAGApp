@@ -12,7 +12,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>() {
     override val mViewModel: SplashViewModel by viewModels()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

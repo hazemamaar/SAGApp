@@ -20,3 +20,4 @@ class SetupActivity : AppCompatActivity() {
         startActivity(Intent(this, BluetoothActivity::class.java))
     }
 }
+  

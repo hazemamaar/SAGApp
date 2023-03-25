@@ -1,6 +1,5 @@
 package com.example.sagapp.welcome.ui.fragment
 
-import android.util.Log
 import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.example.core.base.android.BaseFragment
@@ -12,7 +11,6 @@ import com.example.sagapp.welcome.ui.viewmodel.OnBoardingViewModel
 import com.zhpan.indicator.enums.IndicatorSlideMode
 import com.zhpan.indicator.enums.IndicatorStyle
 import dagger.hilt.android.AndroidEntryPoint
-import timber.log.Timber
 import javax.inject.Inject
 
 
@@ -31,7 +29,7 @@ class OnBoardingFragment : BaseFragment<FragmentOnBoardingBinding, OnBoardingVie
         initIndicator()
     }
 
-    fun viewPager2Scrolling() {
+   private fun viewPager2Scrolling() {
         binding.viewpagerOnboard.registerOnPageChangeCallback(object : OnPageChangeCallback() {
             override fun onPageScrolled(
                 position: Int,
@@ -42,19 +40,16 @@ class OnBoardingFragment : BaseFragment<FragmentOnBoardingBinding, OnBoardingVie
                 binding.indicator.onPageScrolled(position, positionOffset, positionOffsetPixels)
             }
 
-
-
-
             override fun onPageScrollStateChanged(state: Int) {
                 super.onPageScrollStateChanged(state)
             }
         })
     }
-    fun initIndicator() {
-        binding.indicator.setSliderWidth(40f)
+   private fun initIndicator() {
+        binding.indicator.setSliderWidth(15f)
         binding.indicator.setSliderHeight(10f)
-        binding.indicator.setSlideMode(IndicatorSlideMode.WORM)
-        binding.indicator.setIndicatorStyle(IndicatorStyle.ROUND_RECT)
+        binding.indicator.setSlideMode(IndicatorSlideMode.SMOOTH)
+        binding.indicator.setIndicatorStyle(IndicatorStyle.CIRCLE)
         binding.indicator.setPageSize(3)
         binding.indicator.notifyDataChanged()
     }
@@ -70,8 +65,6 @@ class OnBoardingFragment : BaseFragment<FragmentOnBoardingBinding, OnBoardingVie
     private fun handleUiState(action: OnBoardingAction) {
         when (action) {
             is OnBoardingAction.OnBoarding -> {
-                Timber.e("${action.list}")
-                Log.e("aya","${action.list}")
                 onBoardAdapter.onBoardList =action.list
                 binding.viewpagerOnboard.adapter= onBoardAdapter
             }

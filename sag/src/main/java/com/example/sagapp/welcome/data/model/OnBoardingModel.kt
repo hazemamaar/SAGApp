@@ -1,3 +1,12 @@
 package com.example.sagapp.welcome.data.model
 
-data class OnBoardingModel (val welcomeWord:Int, val welcomeImage:Int,val welcomeText:Int)
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
+
+data class OnBoardingModel (
+    @StringRes
+    val welcomeWord:Int,
+    @DrawableRes
+    val welcomeImage:Int,
+    @StringRes
+    val welcomeText:Int)
