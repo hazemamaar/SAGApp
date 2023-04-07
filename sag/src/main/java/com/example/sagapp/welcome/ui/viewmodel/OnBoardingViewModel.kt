@@ -11,13 +11,14 @@ import javax.inject.Inject
 
 sealed class OnBoardingAction : Action {
     data class OnBoarding(val list: List<OnBoardingModel>) : OnBoardingAction()
+
 }
 
 @HiltViewModel
-class OnBoardingViewModel @Inject constructor(val onBoardingData: OnBoardingData) : BaseViewModel<OnBoardingAction>() {
+class OnBoardingViewModel @Inject constructor(val onBoardData: OnBoardingData) : BaseViewModel<OnBoardingAction>() {
 
 
     fun getOnBoarding(){
-        produce(OnBoardingAction.OnBoarding(onBoardingData.welcomeData()))
+        produce(OnBoardingAction.OnBoarding(onBoardData.welcomeData()))
     }
 }

@@ -23,7 +23,7 @@
     <style name="Theme.SAGApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="splash_title">
-        <item name="android:textSize">55dp</item>
+        <item name="android:textSize">55sp</item>
         <item name="android:textColor">@color/dark_green</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -43,10 +43,9 @@
 
     </style>
 
-    <style name="Button">
-        <item name="backgroundTint">@color/off_white</item>
+    <style name="txt_style">
         <item name="android:textColor">@color/dark_green</item>
-        <item name="android:textSize">15dp</item>
+        <item name="android:textSize">@dimen/_20ssp</item>
     </style>
     <style name="button_style" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
         <item name="cornerRadius">@dimen/_12sdp</item>
