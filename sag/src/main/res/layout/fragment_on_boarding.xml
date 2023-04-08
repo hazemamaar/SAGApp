@@ -12,10 +12,18 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="175dp"
-
+        app:layout_constraintTop_toBottomOf="@id/onboard_fragment_guideline_viewpager"
+        android:paddingStart="@dimen/_30sdp"
+        android:paddingEnd="@dimen/_30sdp"
         />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/onboard_fragment_guideline_viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".20"/>
+
+
     <com.zhpan.indicator.IndicatorView
         android:id="@+id/indicator"
         android:layout_width="wrap_content"
@@ -51,7 +59,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginStart="@dimen/_18sdp"
         android:layout_marginBottom="@dimen/_5sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_40sdp"
+        />
+    <ImageView
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        app:layout_constraintStart_toEndOf="@id/onboard_fragment_next_txt"
+        app:layout_constraintTop_toTopOf="@id/onboard_fragment_next_txt"
+        app:layout_constraintBottom_toBottomOf="@id/onboard_fragment_next_txt"
+        android:src="@drawable/ic_arrow"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
         />
     <TextView
         android:id="@+id/onboard_fragment_skip_txt"
@@ -62,7 +80,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="@string/skip_btn"
         style="@style/txt_style"
-        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginStart="@dimen/_23sdp"
         android:layout_marginBottom="@dimen/_5sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         />

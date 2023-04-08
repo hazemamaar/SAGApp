@@ -4,8 +4,10 @@ import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.example.core.base.android.BaseFragment
 import com.example.core.extentions.gone
+import com.example.core.extentions.navigateSafe
 import com.example.core.extentions.observe
 import com.example.core.extentions.visible
+import com.example.sagapp.R
 import com.example.sagapp.databinding.FragmentOnBoardingBinding
 import com.example.sagapp.welcome.ui.adapters.OnBoardAdapter
 import com.example.sagapp.welcome.ui.viewmodel.OnBoardingAction
@@ -33,6 +35,12 @@ class OnBoardingFragment : BaseFragment<FragmentOnBoardingBinding, OnBoardingVie
         binding.onboardFragmentNextTxt.setOnClickListener {
             binding.viewpagerOnboard.currentItem = binding.viewpagerOnboard.currentItem + 1
         }
+        binding.onboardFragmentConfirmBtn.setOnClickListener {
+            navigateSafe(R.id.action_onBoardingFragment_to_loginFragment,container= R.id.frag_host)
+        }
+        binding.onboardFragmentSkipTxt.setOnClickListener {
+            navigateSafe(R.id.action_onBoardingFragment_to_loginFragment,container= R.id.frag_host)
+        }
 
     }
 
@@ -59,6 +67,7 @@ class OnBoardingFragment : BaseFragment<FragmentOnBoardingBinding, OnBoardingVie
                     binding.onboardFragmentSkipTxt.visible()
                 }
                 binding.indicator.onPageSelected(position)
+
             }
 
 //            override fun onPageScrollStateChanged(state: Int) {
