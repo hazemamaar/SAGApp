@@ -23,4 +23,9 @@
     <string name="next_btn">NEXT</string>
     <string name="img_onboard_rv">Onboard Image</string>
     <string name="get_start">Get Start</string>
+    <string name="login_title">Login</string>
+    <string name="login_sub_title">please sign in to continue</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="forget_password_tv">Forget Password?</string>
 </resources>
