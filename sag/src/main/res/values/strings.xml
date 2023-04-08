@@ -13,7 +13,7 @@
     <string name="title_activity_activities">activities</string>
     <string name="splash_title">SAG</string>
 
-
+    <string name="Splash_Sag_Image">Splash Image</string>
     <string name="first_onboard_screen">How to use SAG</string>
 
     <string name="first_onboard_page">Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry\'s standard </string>
@@ -21,5 +21,11 @@
     <string name="third_onboard_page">Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry\'s standard</string>
     <string name="skip_btn">SKIP</string>
     <string name="next_btn">NEXT</string>
-
+    <string name="img_onboard_rv">Onboard Image</string>
+    <string name="get_start">Get Start</string>
+    <string name="login_title">Login</string>
+    <string name="login_sub_title">please sign in to continue</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="forget_password_tv">Forget Password?</string>
 </resources>

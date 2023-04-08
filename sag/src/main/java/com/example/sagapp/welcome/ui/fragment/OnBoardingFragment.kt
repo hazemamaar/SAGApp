@@ -1,10 +1,11 @@
 package com.example.sagapp.welcome.ui.fragment
 
-import android.util.Log
 import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.example.core.base.android.BaseFragment
+import com.example.core.extentions.gone
 import com.example.core.extentions.observe
+import com.example.core.extentions.visible
 import com.example.sagapp.databinding.FragmentOnBoardingBinding
 import com.example.sagapp.welcome.ui.adapters.OnBoardAdapter
 import com.example.sagapp.welcome.ui.viewmodel.OnBoardingAction
@@ -12,7 +13,6 @@ import com.example.sagapp.welcome.ui.viewmodel.OnBoardingViewModel
 import com.zhpan.indicator.enums.IndicatorSlideMode
 import com.zhpan.indicator.enums.IndicatorStyle
 import dagger.hilt.android.AndroidEntryPoint
-import timber.log.Timber
 import javax.inject.Inject
 
 
@@ -20,8 +20,9 @@ import javax.inject.Inject
 class OnBoardingFragment : BaseFragment<FragmentOnBoardingBinding, OnBoardingViewModel>() {
 
     override val mViewModel: OnBoardingViewModel by viewModels()
+
     @Inject
-    lateinit var onBoardAdapter : OnBoardAdapter
+    lateinit var onBoardAdapter: OnBoardAdapter
     override fun onFragmentReady() {
 
 
@@ -29,9 +30,13 @@ class OnBoardingFragment : BaseFragment<FragmentOnBoardingBinding, OnBoardingVie
         subscribeToObservers()
         viewPager2Scrolling()
         initIndicator()
+        binding.onboardFragmentNextTxt.setOnClickListener {
+            binding.viewpagerOnboard.currentItem = binding.viewpagerOnboard.currentItem + 1
+        }
+
     }
 
-    fun viewPager2Scrolling() {
+    private fun viewPager2Scrolling() {
         binding.viewpagerOnboard.registerOnPageChangeCallback(object : OnPageChangeCallback() {
             override fun onPageScrolled(
                 position: Int,
@@ -42,19 +47,31 @@ class OnBoardingFragment : BaseFragment<FragmentOnBoardingBinding, OnBoardingVie
                 binding.indicator.onPageScrolled(position, positionOffset, positionOffsetPixels)
             }
 
-
-
-
-            override fun onPageScrollStateChanged(state: Int) {
-                super.onPageScrollStateChanged(state)
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                if (position == 2) {
+                    binding.onboardFragmentConfirmBtn.visible()
+                    binding.onboardFragmentNextTxt.gone()
+                    binding.onboardFragmentSkipTxt.gone()
+                } else {
+                    binding.onboardFragmentConfirmBtn.gone()
+                    binding.onboardFragmentNextTxt.visible()
+                    binding.onboardFragmentSkipTxt.visible()
+                }
+                binding.indicator.onPageSelected(position)
             }
+
+//            override fun onPageScrollStateChanged(state: Int) {
+//                super.onPageScrollStateChanged(state)
+//            }
         })
     }
-    fun initIndicator() {
-        binding.indicator.setSliderWidth(40f)
+
+    private fun initIndicator() {
+        binding.indicator.setSliderWidth(15f)
         binding.indicator.setSliderHeight(10f)
-        binding.indicator.setSlideMode(IndicatorSlideMode.WORM)
-        binding.indicator.setIndicatorStyle(IndicatorStyle.ROUND_RECT)
+        binding.indicator.setSlideMode(IndicatorSlideMode.SMOOTH)
+        binding.indicator.setIndicatorStyle(IndicatorStyle.CIRCLE)
         binding.indicator.setPageSize(3)
         binding.indicator.notifyDataChanged()
     }
@@ -70,10 +87,8 @@ class OnBoardingFragment : BaseFragment<FragmentOnBoardingBinding, OnBoardingVie
     private fun handleUiState(action: OnBoardingAction) {
         when (action) {
             is OnBoardingAction.OnBoarding -> {
-                Timber.e("${action.list}")
-                Log.e("aya","${action.list}")
-                onBoardAdapter.onBoardList =action.list
-                binding.viewpagerOnboard.adapter= onBoardAdapter
+                onBoardAdapter.onBoardList = action.list
+                binding.viewpagerOnboard.adapter = onBoardAdapter
             }
         }
 

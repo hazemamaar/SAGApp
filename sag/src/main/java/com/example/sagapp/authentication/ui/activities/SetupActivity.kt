@@ -14,9 +14,10 @@ class SetupActivity : AppCompatActivity() {
      private val mViewModel: LoginViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_setup)
+        setContentView(R.layout.fragment_login)
 //        mViewModel.login(LoginParams("Hagar@gmail.com","123456"))
 
-        startActivity(Intent(this, BluetoothActivity::class.java))
+
     }
 }
+  

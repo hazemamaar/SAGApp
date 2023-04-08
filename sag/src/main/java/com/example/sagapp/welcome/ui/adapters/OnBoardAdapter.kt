@@ -16,7 +16,7 @@ class OnBoardAdapter @Inject constructor() : RecyclerView.Adapter<OnBoardAdapter
         fun bind(item:OnBoardingModel){
             binding.imageView.setImageResource(item.welcomeImage)
             binding.splashtitle.setText(item.welcomeWord)
-            binding.descriptionsplash.setText(item.welcomeText)
+            binding.onboardRvDescriptionTxt.setText(item.welcomeText)
         }
     }
 
@@ -36,7 +36,7 @@ class OnBoardAdapter @Inject constructor() : RecyclerView.Adapter<OnBoardAdapter
             return oldItem == newItem
         }
     }
-    val differ = AsyncListDiffer(this, differCallBack)
+    private val differ = AsyncListDiffer(this, differCallBack)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OnBoardViewHolder {
         return OnBoardViewHolder(

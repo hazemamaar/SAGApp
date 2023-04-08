@@ -8,8 +8,7 @@
         android:maxSdkVersion="30" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission
-        android:name="android.permission.BLUETOOTH_SCAN"
-        android:usesPermissionFlags="neverForLocation" />
+        android:name="android.permission.BLUETOOTH_SCAN" />
 
     <uses-feature android:name="android.hardware.bluetooth" />
 
@@ -26,24 +25,27 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".ble.ui.BluetoothActivity"
-            android:exported="false"
-            android:label="@string/title_activity_activities"
-            android:theme="@style/Theme.SAGApp.NoActionBar" />
-        <activity
-            android:name= ".welcome.ui.activities.SplashActivity"
+
+            android:name=".authentication.ui.activities.SetupActivity"
             android:exported="true"
-            android:label="@string/title_activity_bluetooth"
-            android:theme="@style/Theme.SAGApp.NoActionBar">
+            android:theme="@style/Theme.SAGApp.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".authentication.ui.activities.SetupActivity"
-            android:exported="false"></activity>
+            android:name= ".ble.ui.BluetoothActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SAGApp.NoActionBar" />
+
+        <activity
+            android:name= ".welcome.ui.activities.SplashActivity"
+            android:exported="false"
+            android:label="@string/title_activity_bluetooth"
+            android:theme="@style/Theme.SAGApp.NoActionBar" />
+
     </application>
 
 </manifest>
