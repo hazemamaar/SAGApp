@@ -25,7 +25,10 @@
     <string name="get_start">Get Start</string>
     <string name="login_title">Login</string>
     <string name="login_sub_title">please sign in to continue</string>
-    <string name="email_hint">Email</string>
-    <string name="password_hint">Password</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
     <string name="forget_password_tv">Forget Password?</string>
+    <string name="remember_me">Remember me</string>
+    <string name="quarter_circle_image_description">Quarter Circle Image</string>
 </resources>

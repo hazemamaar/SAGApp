@@ -27,24 +27,27 @@
         <activity
 
             android:name=".authentication.ui.activities.SetupActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SAGApp.NoActionBar" >
+
+        </activity>
+
+        <activity
+            android:name= ".ble.ui.BluetoothActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SAGApp.NoActionBar" />
+
+        <activity
+            android:name= ".welcome.ui.activities.SplashActivity"
             android:exported="true"
+            android:label="@string/title_activity_bluetooth"
             android:theme="@style/Theme.SAGApp.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-
-        <activity
-            android:name= ".ble.ui.BluetoothActivity"
-            android:exported="true"
-            android:theme="@style/Theme.SAGApp.NoActionBar" />
-
-        <activity
-            android:name= ".welcome.ui.activities.SplashActivity"
-            android:exported="false"
-            android:label="@string/title_activity_bluetooth"
-            android:theme="@style/Theme.SAGApp.NoActionBar" />
 
     </application>
 
