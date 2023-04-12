@@ -31,4 +31,8 @@
     <string name="forget_password_tv">Forget Password?</string>
     <string name="remember_me">Remember me</string>
     <string name="quarter_circle_image_description">Quarter Circle Image</string>
+
+    <string name="forgot_password_title">Forgot Password</string>
+    <string name="forget_sub_txt">please enter the address associated with your account</string>
+    <string name="send_btn">Send</string>
 </resources>
