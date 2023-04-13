@@ -35,4 +35,9 @@
     <string name="forgot_password_title">Forgot Password</string>
     <string name="forget_sub_txt">please enter the address associated with your account</string>
     <string name="send_btn">Send</string>
+
+    <string name="successful_operation_tv">Successful operation</string>
+    <string name="success_sub_title">Check your Email to see new password</string>
+
+
 </resources>
