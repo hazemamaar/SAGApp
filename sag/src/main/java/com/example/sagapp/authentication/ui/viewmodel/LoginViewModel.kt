@@ -3,10 +3,9 @@ package com.example.sagapp.authentication.ui.viewmodel
 import androidx.lifecycle.viewModelScope
 import com.example.core.base.android.Action
 import com.example.core.base.android.BaseViewModel
-import com.example.core.extentions.showLog
 import com.example.core.response.Resource
 import com.example.sagapp.authentication.data.local.entities.LoginDto
-import com.example.sagapp.authentication.data.local.entities.LoginParams
+import com.example.sagapp.authentication.domain.model.LoginParams
 import com.example.sagapp.authentication.domain.usecase.LoginUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -31,7 +30,7 @@ class LoginViewModel @Inject constructor(private val loginUseCase: LoginUseCase)
                           produce(LoginAction.Loading)
                 }
                 is Resource.Success -> {
-                    it.data.showLog("llllllllllll")
+
                     produce(LoginAction.Success(it.data))
                 }
             }

@@ -32,7 +32,6 @@ class BluetoothViewModel @Inject constructor(
         produce(BluetoothAction.PairedDevices(bluetoothController.pairedDevices.value))
     }
 
-
     private var deviceConnectionJob: Job? = null
 
     init {

@@ -36,6 +36,7 @@ class OnBoardingFragment : BaseFragment<FragmentOnBoardingBinding, OnBoardingVie
             binding.viewpagerOnboard.currentItem = binding.viewpagerOnboard.currentItem + 1
         }
         binding.onboardFragmentConfirmBtn.setOnClickListener {
+            mViewModel.onBoardingWriteToFinish()
             navigateSafe(R.id.action_onBoardingFragment_to_loginFragment,container= R.id.frag_host)
         }
         binding.onboardFragmentSkipTxt.setOnClickListener {
@@ -95,7 +96,7 @@ class OnBoardingFragment : BaseFragment<FragmentOnBoardingBinding, OnBoardingVie
 
     private fun handleUiState(action: OnBoardingAction) {
         when (action) {
-            is OnBoardingAction.OnBoarding -> {
+            is OnBoardingAction.OnBoardingData -> {
                 onBoardAdapter.onBoardList = action.list
                 binding.viewpagerOnboard.adapter = onBoardAdapter
             }

@@ -2,7 +2,7 @@ package com.example.sagapp.authentication.data.repo
 
 import com.example.core.response.BaseResponse
 import com.example.sagapp.authentication.data.local.entities.LoginDto
-import com.example.sagapp.authentication.data.local.entities.LoginParams
+import com.example.sagapp.authentication.domain.model.LoginParams
 import com.example.sagapp.authentication.data.remote.service.AuthenticationServices
 import javax.inject.Inject
 

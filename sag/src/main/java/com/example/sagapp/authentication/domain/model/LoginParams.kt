@@ -1,4 +1,4 @@
-package com.example.sagapp.authentication.data.local.entities
+package com.example.sagapp.authentication.domain.model
 
 import com.google.gson.annotations.SerializedName
 
