@@ -1,6 +1,8 @@
 package com.example.sagapp.di
 
 import android.content.Context
+import com.example.sagapp.authentication.data.repo.AuthenticationRepo
+import com.example.sagapp.authentication.data.repo.AuthenticationRepoImpl
 import com.example.sagapp.ble.data.AndroidBluetoothController
 import com.example.sagapp.ble.domin.BluetoothController
 import com.example.sagapp.common.preDataStore.PreDataStore
@@ -38,4 +40,6 @@ class DataStoreModule  {
     fun provideBluetoothController(@ApplicationContext context: Context): BluetoothController {
         return AndroidBluetoothController(context)
     }
+
+
 }

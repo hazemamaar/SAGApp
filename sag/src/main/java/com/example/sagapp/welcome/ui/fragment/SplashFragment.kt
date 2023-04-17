@@ -44,6 +44,7 @@ class SplashFragment : BaseFragment<FragmentSplashBinding, SplashViewModel>() {
                     navigateSafe(SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment(), container = R.id.frag_host)
                 }
             }
+            else -> {}
         }
     }
 }

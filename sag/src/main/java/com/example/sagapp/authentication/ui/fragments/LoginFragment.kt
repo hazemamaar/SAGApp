@@ -15,7 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class LoginFragment : BaseFragment<FragmentLoginBinding,LoginViewModel>() {
     override fun onFragmentReady() {
         binding.loginFragmentConfirmBtn.setOnClickListener {
-            mViewModel.login( LoginParams(binding.inputTextEmail.text.toString(),binding.inputTextPassword.text.toString()))
+            mViewModel.login( LoginParams(binding.loginFragmentEmailInputText.text.toString(),binding.loginFragmentPasswordInputText.text.toString()))
 
         }
         subscribeToObservers()

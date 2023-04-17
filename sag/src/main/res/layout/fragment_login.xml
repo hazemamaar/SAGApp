@@ -56,7 +56,7 @@
         />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputTextLayoutEmail"
+        android:id="@+id/login_fragment_email_input_text_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/setup_ed_txt"
@@ -70,7 +70,7 @@
         android:hint="@string/email"
         >
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputTextEmail"
+            android:id="@+id/login_fragment_email_input_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -82,13 +82,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputTextLayoutPassword"
+        android:id="@+id/login_fragment_password_input_text_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/setup_ed_txt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputTextLayoutEmail"
+        app:layout_constraintTop_toBottomOf="@id/login_fragment_email_input_text_layout"
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginStart="@dimen/_18sdp"
         android:layout_marginBottom="@dimen/_5sdp"
@@ -97,7 +97,7 @@
         app:passwordToggleEnabled="true"
         >
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputTextPassword"
+            android:id="@+id/login_fragment_password_input_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -119,19 +119,20 @@
         android:textSize="@dimen/_12ssp"
         android:layout_marginTop="@dimen/_5sdp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputTextLayoutPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/login_fragment_password_input_text_layout" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/login_fragment_forget_password_txt"
         style="@style/forget_password_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/forget_password_tv"
        android:layout_marginTop="@dimen/_16sdp"
-        android:textSize="@dimen/_12ssp"
+        android:textSize="@dimen/_13ssp"
         app:layout_constraintEnd_toEndOf="parent"
+        android:linksClickable="true"
         android:layout_marginEnd="@dimen/_30sdp"
-        app:layout_constraintTop_toBottomOf="@+id/inputTextLayoutPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/login_fragment_password_input_text_layout" />
    <com.google.android.material.button.MaterialButton
        android:id="@+id/login_fragment_confirm_btn"
        android:layout_width="match_parent"

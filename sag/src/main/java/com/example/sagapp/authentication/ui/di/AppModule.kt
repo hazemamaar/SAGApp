@@ -3,6 +3,8 @@ package com.example.sagapp.authentication.ui.di
 
 import com.example.sagapp.BuildConfig
 import com.example.sagapp.authentication.data.remote.service.AuthenticationServices
+import com.example.sagapp.authentication.data.repo.AuthenticationRepo
+import com.example.sagapp.authentication.data.repo.AuthenticationRepoImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,7 +30,7 @@ class AppModule {
 
     @Provides
     fun provideOkHttpClient(
-        interceptor: HttpLoggingInterceptor,
+        interceptor: HttpLoggingInterceptor
     ): OkHttpClient =
         OkHttpClient.Builder()
             .connectTimeout(50, TimeUnit.SECONDS)
@@ -55,7 +57,11 @@ class AppModule {
                 addConverterFactory(GsonConverterFactory.create())
                 build()
             }.create(AuthenticationServices::class.java)
-
+    @Provides
+    @Singleton
+    fun provideAuthenticationRepoController(authenticationServices: AuthenticationServices): AuthenticationRepo {
+        return AuthenticationRepoImpl(authenticationServices)
+    }
 //    @Singleton
 //    @Provides
 //    fun provideApplicationContext(

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/off_white"
-    tools:context=".authentication.ui.SuccessfulLoginFragment">
+    tools:context=".authentication.ui.fragments.SuccessfulLoginFragment">
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/success_sub_title"
-        style="@style/success_sub_title"
+        style="@style/sub_title"
         android:textSize="@dimen/_11ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Go to Login?"
-        style="@style/success_sub_title"
+        style="@style/sub_title"
         android:textSize="@dimen/_11ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
