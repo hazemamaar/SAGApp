@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/setup_nav"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.sagapp.welcome.ui.fragment.SplashFragment"
@@ -17,7 +17,15 @@
         android:id="@+id/loginFragment"
         android:name="com.example.sagapp.authentication.ui.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_successfulLoginFragment"
+            app:destination="@id/successfulLoginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment" />
+
+    </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.example.sagapp.welcome.ui.fragment.OnBoardingFragment"
@@ -27,4 +35,59 @@
             android:id="@+id/action_onBoardingFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/successfulLoginFragment"
+        android:name="com.example.sagapp.authentication.ui.fragments.SuccessfulLoginFragment"
+        android:label="fragment_successful_login"
+        tools:layout="@layout/fragment_successful_login" >
+        <action
+            android:id="@+id/action_successfulLoginFragment_to_loadingFragment"
+            app:destination="@id/loadingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="com.example.sagapp.authentication.ui.fragments.ForgetPasswordFragment"
+        android:label="fragment_forget_password"
+        tools:layout="@layout/fragment_forget_password" />
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.example.sagapp.screens.ui.fragments.loadingFragment"
+        android:label="fragment_loding"
+        tools:layout="@layout/fragment_loding" >
+        <action
+            android:id="@+id/action_loadingFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.sagapp.screens.ui.fragments.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_contactusFragment"
+            app:destination="@id/contactusFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactusFragment"
+        android:name="com.example.sagapp.screens.ui.fragments.contactusFragment"
+        android:label="fragment_contactus"
+        tools:layout="@layout/fragment_contactus" >
+        <action
+            android:id="@+id/action_contactusFragment_to_reportsFragment"
+            app:destination="@id/reportsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.example.sagapp.screens.ui.fragments.reportsFragment"
+        android:label="fragment_reports"
+        tools:layout="@layout/fragment_reports" >
+        <action
+            android:id="@+id/action_reportsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.sagapp.screens.ui.fragments.settingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>
