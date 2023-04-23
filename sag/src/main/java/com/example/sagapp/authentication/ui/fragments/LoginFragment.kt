@@ -4,7 +4,9 @@ import android.util.Log
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.example.core.base.android.BaseFragment
+import com.example.core.extentions.navigateSafe
 import com.example.core.extentions.observe
+import com.example.sagapp.R
 import com.example.sagapp.authentication.domain.model.LoginParams
 import com.example.sagapp.authentication.ui.viewmodel.LoginAction
 import com.example.sagapp.authentication.ui.viewmodel.LoginViewModel
@@ -14,12 +16,18 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class LoginFragment : BaseFragment<FragmentLoginBinding,LoginViewModel>() {
     override fun onFragmentReady() {
+
+        subscribeToObservers()
         binding.loginFragmentConfirmBtn.setOnClickListener {
             mViewModel.login( LoginParams(binding.loginFragmentEmailInputText.text.toString(),binding.loginFragmentPasswordInputText.text.toString()))
 
         }
-        subscribeToObservers()
+
+        binding.loginFragmentForgetPasswordTxt.setOnClickListener {
+            navigateSafe(R.id.action_loginFragment_to_forgetPasswordFragment,container= R.id.frag_host)
+        }
     }
+
 
     override val mViewModel: LoginViewModel by viewModels()
     private fun subscribeToObservers() {
@@ -45,4 +53,6 @@ class LoginFragment : BaseFragment<FragmentLoginBinding,LoginViewModel>() {
     }
 
 
-}
+    }
+
+
