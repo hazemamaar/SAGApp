@@ -39,6 +39,7 @@ class OnBoardingFragment : BaseFragment<FragmentOnBoardingBinding, OnBoardingVie
             navigateSafe(R.id.action_onBoardingFragment_to_loginFragment,container= R.id.frag_host)
         }
         binding.onboardFragmentSkipTxt.setOnClickListener {
+            mViewModel.onBoardingWriteToFinish()
             navigateSafe(R.id.action_onBoardingFragment_to_loginFragment,container= R.id.frag_host)
         }
 
