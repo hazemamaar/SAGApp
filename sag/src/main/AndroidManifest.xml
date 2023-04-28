@@ -31,7 +31,9 @@
         <activity
             android:name=".authentication.ui.activities.SetupActivity"
             android:exported="false"
-            android:theme="@style/Theme.SAGApp.NoActionBar"></activity>
+            android:theme="@style/Theme.SAGApp.NoActionBar">
+
+        </activity>
         <activity
             android:name=".ble.ui.BluetoothActivity"
             android:exported="false"
