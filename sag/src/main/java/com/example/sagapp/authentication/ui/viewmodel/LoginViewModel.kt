@@ -1,21 +1,21 @@
 package com.example.sagapp.authentication.ui.viewmodel
 
 import androidx.lifecycle.viewModelScope
-import com.example.core.base.android.Action
-import com.example.core.base.android.BaseViewModel
-import com.example.core.extentions.showLog
+import com.example.sagapp.android.Action
+import com.example.sagapp.android.BaseViewModel
+import com.example.sagapp.android.extentions.showLog
 import com.example.core.response.Resource
-import com.example.sagapp.authentication.data.local.entities.LoginDto
-import com.example.sagapp.authentication.data.local.entities.LoginParams
-import com.example.sagapp.authentication.domain.usecase.LoginUseCase
+import com.example.data.authentcation.entities.LoginDto
+import com.example.data.authentcation.entities.LoginParams
+import com.example.features.authentication.domain.intractors.LoginUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
-sealed class LoginAction :Action{
+sealed class LoginAction : Action {
    object Loading : LoginAction()
     data class FailureMessage(val message:String):LoginAction()
 
-    data class Success(val loginInfo:LoginDto):LoginAction()
+    data class Success(val loginInfo: LoginDto):LoginAction()
 }
 @HiltViewModel
 class LoginViewModel @Inject constructor(private val loginUseCase: LoginUseCase) : BaseViewModel<LoginAction>() {

@@ -2,11 +2,11 @@ package com.example.sagapp.welcome.ui.fragment
 
 import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
-import com.example.core.base.android.BaseFragment
-import com.example.core.extentions.gone
-import com.example.core.extentions.navigateSafe
-import com.example.core.extentions.observe
-import com.example.core.extentions.visible
+import com.example.sagapp.android.BaseFragment
+import com.example.sagapp.android.extentions.gone
+import com.example.sagapp.android.extentions.navigateSafe
+import com.example.sagapp.android.extentions.observe
+import com.example.sagapp.android.extentions.visible
 import com.example.sagapp.R
 import com.example.sagapp.databinding.FragmentOnBoardingBinding
 import com.example.sagapp.welcome.ui.adapters.OnBoardAdapter

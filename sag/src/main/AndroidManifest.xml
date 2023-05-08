@@ -7,10 +7,18 @@
         android:name="android.permission.BLUETOOTH"
         android:maxSdkVersion="30" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-    <uses-permission
-        android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
 
     <uses-feature android:name="android.hardware.bluetooth" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
     <application
         android:name=".common.daggerapp.HiltApplication"
@@ -23,14 +31,34 @@
         android:theme="@style/Theme.SAGApp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".speechtotext.SpeechToTextActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_speech_to_text"
+            android:theme="@style/Theme.SAGApp.Fullscreen" />
+        <activity
+            android:name=".alarm.ui.AlarmActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screensActivity"
+            android:exported="false" />
+        <activity
+            android:name=".authentication.ui.activities.SetupActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SAGApp.NoActionBar"></activity>
         <activity
             android:name=".ble.ui.BluetoothActivity"
             android:exported="false"
-            android:label="@string/title_activity_activities"
             android:theme="@style/Theme.SAGApp.NoActionBar" />
         <activity
-            android:name= ".welcome.ui.activities.SplashActivity"
+            android:name=".welcome.ui.activities.SplashActivity"
             android:exported="true"
             android:label="@string/title_activity_bluetooth"
             android:theme="@style/Theme.SAGApp.NoActionBar">
@@ -40,11 +68,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".authentication.ui.activities.SetupActivity"
-            android:exported="false">
 
-        </activity>
+        <receiver android:name=".alarm.data.AlarmReceiver" />
     </application>
 
 </manifest>

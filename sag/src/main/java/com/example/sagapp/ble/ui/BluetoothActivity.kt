@@ -10,14 +10,14 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.core.base.android.BaseActivity
-import com.example.core.extentions.observe
+import com.example.sagapp.android.BaseActivity
+import com.example.sagapp.android.extentions.observe
 import com.example.sagapp.databinding.ActivityBluetoothBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class BluetoothActivity : BaseActivity<ActivityBluetoothBinding,BluetoothViewModel>() {
+class BluetoothActivity : BaseActivity<ActivityBluetoothBinding, BluetoothViewModel>() {
 
     @Inject
     lateinit var scanDevicesAdapter: BluetoothListAdapter

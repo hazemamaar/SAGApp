@@ -23,4 +23,7 @@
     <string name="next_btn">Next</string>
     <string name="img_onboard_rv">Onboard Image</string>
     <string name="get_start">Get Start</string>
+    <string name="title_activity_speech_to_text">SpeechToTextActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

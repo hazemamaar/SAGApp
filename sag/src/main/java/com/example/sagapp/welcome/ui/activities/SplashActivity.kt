@@ -2,7 +2,7 @@ package com.example.sagapp.welcome.ui.activities
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.example.core.base.android.BaseActivity
+import com.example.sagapp.android.BaseActivity
 import com.example.sagapp.databinding.ActivitySplashBinding
 import com.example.sagapp.welcome.ui.viewmodel.SplashViewModel
 import dagger.hilt.android.AndroidEntryPoint

@@ -1,7 +1,7 @@
 package com.example.sagapp.welcome.ui.viewmodel
 
-import com.example.core.base.android.Action
-import com.example.core.base.android.BaseViewModel
+import com.example.sagapp.android.Action
+import com.example.sagapp.android.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
 import javax.inject.Inject

@@ -1,8 +1,8 @@
 package com.example.sagapp.ble.ui
 
 import androidx.lifecycle.viewModelScope
-import com.example.core.base.android.Action
-import com.example.core.base.android.BaseViewModel
+import com.example.sagapp.android.Action
+import com.example.sagapp.android.BaseViewModel
 import com.example.sagapp.ble.domin.BluetoothController
 import com.example.sagapp.ble.domin.BluetoothDevice
 import com.example.sagapp.ble.domin.BluetoothDeviceDomain
@@ -15,7 +15,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
-sealed class BluetoothAction :Action {
+sealed class BluetoothAction : Action {
     data class ScannedDevices (var scannedDevices: List<BluetoothDevice>) :BluetoothAction()
     data class PairedDevices(var pairedDevices: List<BluetoothDevice>) :BluetoothAction()
     data class Connected( val isConnected:Boolean) :BluetoothAction()
@@ -25,7 +25,7 @@ sealed class BluetoothAction :Action {
 @HiltViewModel
 class BluetoothViewModel @Inject constructor(
     private val bluetoothController: BluetoothController
-):BaseViewModel<BluetoothAction>() {
+): BaseViewModel<BluetoothAction>() {
 
     fun observeDevices() {
         produce(BluetoothAction.ScannedDevices(bluetoothController.scannedDevices.value))

@@ -2,9 +2,9 @@ package com.example.sagapp.welcome.ui.fragment
 
 import android.view.animation.AnimationUtils
 import androidx.fragment.app.viewModels
-import com.example.core.base.android.BaseFragment
-import com.example.core.extentions.navigateSafe
-import com.example.core.extentions.observe
+import com.example.sagapp.android.BaseFragment
+import com.example.sagapp.android.extentions.navigateSafe
+import com.example.sagapp.android.extentions.observe
 import com.example.sagapp.R
 import com.example.sagapp.databinding.FragmentSplashBinding
 import com.example.sagapp.welcome.ui.viewmodel.SplashState
