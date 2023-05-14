@@ -1,6 +1,8 @@
 package com.example.sagapp.welcome.di
 
 import android.content.Context
+import com.example.sagapp.welcome.data.OnBoardPref
+import com.example.sagapp.welcome.data.OnBoardPrefImpl
 import com.example.sagapp.welcome.data.PreDataStore
 import dagger.Module
 import dagger.Provides
@@ -23,4 +25,10 @@ class DataStoreModule  {
     @Singleton
     fun dataStoreManager(@ApplicationContext appContext: Context):PreDataStore =
         PreDataStore(appContext)
+
+    @Provides
+    @Singleton
+    fun provideOnBoardDataStore(@ApplicationContext context: Context): OnBoardPref {
+        return OnBoardPrefImpl(dataStoreManager(context))
+    }
 }

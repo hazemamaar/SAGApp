@@ -1,6 +1,7 @@
 package com.example.features.authentication.data.repo
 
 import com.example.core.response.BaseResponse
+import com.example.data.authentcation.entities.ChangePasswordDto
 import com.example.data.authentcation.entities.LoginDto
 import com.example.data.authentcation.entities.LoginParams
 import com.example.data.authentcation.remote.service.AuthenticationServices
@@ -10,5 +11,9 @@ class AuthenticationRepo @Inject constructor(private val authService: Authentica
 
     suspend fun login(loginParams: LoginParams) : BaseResponse<LoginDto> {
        return authService.login(loginParams)
+    }
+
+    suspend fun changePassword(email: String): BaseResponse<ChangePasswordDto> {
+        return authService.changePassword(email)
     }
 }

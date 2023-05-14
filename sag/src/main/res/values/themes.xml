@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.SAGApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/dark_green</item>
+        <item name="colorPrimaryVariant">@color/off_white</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -27,7 +27,6 @@
         <item name="android:textColor">@color/dark_green</item>
         <item name="android:textStyle">bold</item>
     </style>
-
     <style name="first_onboard_screen">
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/dark_green</item>
@@ -49,7 +48,6 @@
         <item name="android:textSize">@dimen/_20ssp</item>
         <item name="textAllCaps">false</item>
     </style>
-
     <style name="button_style" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
         <item name="cornerRadius">@dimen/_12sdp</item>
         <item name="backgroundTint">@color/dark_green</item>
@@ -58,14 +56,56 @@
         <item name="android:padding">@dimen/_12sdp</item>
     </style>
 
-    <style name="Theme.SAGApp.Fullscreen" parent="Theme.SAGApp">
-        <item name="android:actionBarStyle">@style/Widget.Theme.SAGApp.ActionBar.Fullscreen</item>
-        <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:windowBackground">@null</item>
+
+    <style name="login_title">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">@dimen/_28sdp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="ThemeOverlay.SAGApp.FullscreenContainer" parent="">
-        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
-        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    <style name="login_sub_title">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">@dimen/_15sdp</item>
+    </style>
+
+    <style name="forget_password_tv">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">@dimen/_15sdp</item>
+    </style>
+    <style name="setup_ed_txt"
+        parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+        <item name="boxCornerRadiusBottomEnd">@dimen/_7sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_7sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_7sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_7sdp</item>
+        <item name="boxStrokeColor">@color/dark_green</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="maxLines">1</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="helperTextTextColor">@color/dark_green</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+    <style name="PrimaryColoredButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/dark_green</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+    </style>
+
+    <style name="forget_password_title">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">@dimen/_25sdp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="sub_title">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+    </style>
+
+
+    <style name="successful_operation_tv">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">@dimen/_25sdp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

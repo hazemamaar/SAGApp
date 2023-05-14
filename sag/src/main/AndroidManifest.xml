@@ -32,22 +32,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".speechtotext.SpeechToTextActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
-            android:label="@string/title_activity_speech_to_text"
-            android:theme="@style/Theme.SAGApp.Fullscreen" />
-        <activity
-            android:name=".alarm.ui.AlarmActivity"
+            android:name=".alarm.ui.fragments.AlarmFragment"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name=".screensActivity"
+            android:name=".screens.ui.activities.screensActivity"
             android:exported="false" />
         <activity
             android:name=".authentication.ui.activities.SetupActivity"
@@ -71,7 +61,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".alarm.data.AlarmReceiver" />
+        <receiver android:name="com.example.data.alarm.data.AlarmReceiver" />
     </application>
 
 </manifest>

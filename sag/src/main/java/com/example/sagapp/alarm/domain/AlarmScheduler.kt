@@ -1,6 +1,6 @@
 package com.example.sagapp.alarm.domain
 
-import com.example.sagapp.alarm.data.AlarmItem
+import com.example.data.alarm.data.AlarmItem
 
 interface AlarmScheduler {
     fun schedule(item: AlarmItem)

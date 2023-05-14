@@ -1,18 +1,17 @@
 package com.example.sagapp.authentication.ui.viewmodel
 
 import androidx.lifecycle.viewModelScope
-import com.example.sagapp.android.Action
-import com.example.sagapp.android.BaseViewModel
-import com.example.sagapp.android.extentions.showLog
 import com.example.core.response.Resource
 import com.example.data.authentcation.entities.LoginDto
 import com.example.data.authentcation.entities.LoginParams
 import com.example.features.authentication.domain.intractors.LoginUseCase
+import com.example.sagapp.android.Action
+import com.example.sagapp.android.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 sealed class LoginAction : Action {
-   object Loading : LoginAction()
+    object Loading : LoginAction()
     data class FailureMessage(val message:String):LoginAction()
 
     data class Success(val loginInfo: LoginDto):LoginAction()
@@ -28,10 +27,10 @@ class LoginViewModel @Inject constructor(private val loginUseCase: LoginUseCase)
                 }
                 is Resource.Progress -> {
                     if(it.loading)
-                          produce(LoginAction.Loading)
+                        produce(LoginAction.Loading)
                 }
                 is Resource.Success -> {
-                    it.data.showLog("llllllllllll")
+
                     produce(LoginAction.Success(it.data))
                 }
             }

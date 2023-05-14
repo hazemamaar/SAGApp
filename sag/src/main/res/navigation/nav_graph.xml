@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/setup_nav"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/alarmFragment">
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.sagapp.welcome.ui.fragment.SplashFragment"
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.sagapp.authentication.ui.LoginFragment"
+        android:name="com.example.sagapp.authentication.ui.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -50,4 +50,9 @@
             android:id="@+id/action_forgetPasswordFragment_to_successfulLoginFragment"
             app:destination="@id/successfulLoginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/alarmFragment"
+        android:name="com.example.sagapp.alarm.ui.fragments.AlarmFragment"
+        android:label="fragment_alarm"
+        tools:layout="@layout/fragment_alarm" />
 </navigation>

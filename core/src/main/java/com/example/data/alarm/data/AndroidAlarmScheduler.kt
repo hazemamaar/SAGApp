@@ -1,4 +1,4 @@
-package com.example.sagapp.alarm.data
+package com.example.data.alarm.data
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -26,6 +26,7 @@ class AndroidAlarmScheduler(
                 intent,
                 PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
             )
+
         )
     }
 

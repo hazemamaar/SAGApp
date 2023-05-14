@@ -19,11 +19,25 @@
     <string name="first_onboard_page">Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry\'s standard </string>
     <string name="second_onboard_page">Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry\'s standard</string>
     <string name="third_onboard_page">Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry\'s standard</string>
-    <string name="skip_btn">Skip</string>
-    <string name="next_btn">Next</string>
+    <string name="skip_btn">SKIP</string>
+    <string name="next_btn">NEXT</string>
     <string name="img_onboard_rv">Onboard Image</string>
     <string name="get_start">Get Start</string>
-    <string name="title_activity_speech_to_text">SpeechToTextActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="login_title">Login</string>
+    <string name="login_sub_title">please sign in to continue</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forget_password_tv">Forget Password?</string>
+    <string name="remember_me">Remember me</string>
+    <string name="quarter_circle_image_description">Quarter Circle Image</string>
+
+    <string name="forgot_password_title">Forgot Password</string>
+    <string name="forget_sub_txt">please enter the address associated with your account</string>
+    <string name="send_btn">Send</string>
+
+    <string name="successful_operation_tv">Successful operation</string>
+    <string name="success_sub_title">Check your Email to see new password</string>
+
+
 </resources>
