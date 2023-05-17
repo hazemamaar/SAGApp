@@ -4,7 +4,10 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import com.example.sagapp.alarm.domain.AlarmScheduler
+import android.os.Build
+import androidx.annotation.RequiresApi
+import com.example.data.alarm.domain.AlarmScheduler
+
 import java.time.ZoneId
 
 class AndroidAlarmScheduler(
@@ -13,6 +16,7 @@ class AndroidAlarmScheduler(
 
     private val alarmManager = context.getSystemService(AlarmManager::class.java)
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun schedule(item: AlarmItem) {
         val intent = Intent(context, AlarmReceiver::class.java).apply {
             putExtra("EXTRA_MESSAGE", item.message)

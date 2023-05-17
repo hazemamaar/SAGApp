@@ -11,5 +11,6 @@ class AlarmReceiver: BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         val message = intent?.getStringExtra("EXTRA_MESSAGE") ?: return
         Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+        Log.e("hazemaa", "onReceive: time to wake up" )
     }
 }

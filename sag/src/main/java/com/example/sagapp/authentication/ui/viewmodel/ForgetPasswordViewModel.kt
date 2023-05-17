@@ -36,7 +36,6 @@ class ForgetPasswordViewModel @Inject constructor(private val forgetPasswordUseC
                     produce(ForgetPasswordAction.Success(it.data.data!!))
                 }
             }
-            0
         }
     }
 }

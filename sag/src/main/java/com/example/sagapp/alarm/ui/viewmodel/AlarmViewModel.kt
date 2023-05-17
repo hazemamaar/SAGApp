@@ -1,7 +1,7 @@
 package com.example.sagapp.alarm.ui.viewmodel
 
 import com.example.data.alarm.data.AlarmItem
-import com.example.sagapp.alarm.domain.AlarmScheduler
+import com.example.data.alarm.domain.AlarmScheduler
 import com.example.sagapp.android.Action
 import com.example.sagapp.android.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -12,7 +12,7 @@ sealed class AlarmActions:Action{
     object  Schedule:AlarmActions()
 }
 @HiltViewModel
-class AlarmViewModel @Inject constructor(private val alarmScheduler:AlarmScheduler) : BaseViewModel<AlarmActions>() {
+class AlarmViewModel @Inject constructor(private val alarmScheduler: AlarmScheduler) : BaseViewModel<AlarmActions>() {
     fun scheduleAlarm(alarmItem: AlarmItem){
           alarmItem.let (alarmScheduler::schedule)
            produce(AlarmActions.Schedule)

@@ -2,7 +2,7 @@ package com.example.sagapp.alarm.ui
 
 import android.content.Context
 import com.example.data.alarm.data.AndroidAlarmScheduler
-import com.example.sagapp.alarm.domain.AlarmScheduler
+import com.example.data.alarm.domain.AlarmScheduler
 import com.example.sagapp.ble.data.AndroidBluetoothController
 import com.example.sagapp.ble.domin.BluetoothController
 import dagger.Module

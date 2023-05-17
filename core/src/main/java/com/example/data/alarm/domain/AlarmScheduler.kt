@@ -1,4 +1,4 @@
-package com.example.sagapp.alarm.domain
+package com.example.data.alarm.domain
 
 import com.example.data.alarm.data.AlarmItem
 
