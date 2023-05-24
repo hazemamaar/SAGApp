@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/setup_nav"
-    app:startDestination="@id/alarmFragment">
+    app:startDestination="@id/homeFragment2">
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.sagapp.welcome.ui.fragment.SplashFragment"
@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_successfulLoginFragment_to_loginFragment2"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_successfulLoginFragment_to_loadingFragment"
+            app:destination="@id/loadingFragment" />
     </fragment>
     <fragment
         android:id="@+id/forgetPasswordFragment"
@@ -55,4 +58,73 @@
         android:name="com.example.sagapp.alarm.ui.fragments.AlarmFragment"
         android:label="fragment_alarm"
         tools:layout="@layout/fragment_alarm" />
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.sagapp.screens.ui.fragments.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_contactusFragment2"
+            app:destination="@id/contactusFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_reportsFragment22"
+            app:destination="@id/reportsFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_settingsFragment2"
+            app:destination="@id/settingsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.example.sagapp.screens.ui.fragments.loadingFragment"
+        android:label="fragment_loding"
+        tools:layout="@layout/fragment_loding" >
+        <action
+            android:id="@+id/action_loadingFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactusFragment2"
+        android:name="com.example.sagapp.screens.ui.fragments.contactusFragment"
+        android:label="fragment_contactus"
+        tools:layout="@layout/fragment_contactus" >
+        <action
+            android:id="@+id/action_contactusFragment2_to_reportsFragment2"
+            app:destination="@id/reportsFragment2" />
+        <action
+            android:id="@+id/action_contactusFragment2_to_settingsFragment22"
+            app:destination="@id/settingsFragment2" />
+        <action
+            android:id="@+id/action_contactusFragment2_to_homeFragment22"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportsFragment2"
+        android:name="com.example.sagapp.screens.ui.fragments.reportsFragment"
+        android:label="fragment_reports"
+        tools:layout="@layout/fragment_reports" >
+        <action
+            android:id="@+id/action_reportsFragment2_to_settingsFragment22"
+            app:destination="@id/settingsFragment2" />
+        <action
+            android:id="@+id/action_reportsFragment2_to_contactusFragment22"
+            app:destination="@id/contactusFragment2" />
+        <action
+            android:id="@+id/action_reportsFragment2_to_homeFragment22"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment2"
+        android:name="com.example.sagapp.screens.ui.fragments.settingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment2_to_reportsFragment22"
+            app:destination="@id/reportsFragment2" />
+        <action
+            android:id="@+id/action_settingsFragment2_to_contactusFragment22"
+            app:destination="@id/contactusFragment2" />
+        <action
+            android:id="@+id/action_settingsFragment2_to_homeFragment22"
+            app:destination="@id/homeFragment2" />
+    </fragment>
 </navigation>
