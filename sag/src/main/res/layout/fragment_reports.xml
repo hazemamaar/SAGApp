@@ -10,9 +10,9 @@
         android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".30"
-        />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="123dp" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
@@ -21,18 +21,42 @@
         app:layout_constraintGuide_percent=".10"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Report"
+        style="@style/home_TV"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline3"
+        app:layout_constraintBottom_toBottomOf="@id/guideline1"
+
+        />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="288dp" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".05"
+        />
+
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent=".70"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".45"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".75"
         />
 
     <TextView
@@ -43,80 +67,108 @@
         app:layout_constraintTop_toTopOf="@id/guideline3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/guideline2"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="80dp"
         />
-
-    <ImageView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/full_circle"
-        app:layout_constraintBottom_toBottomOf="@+id/guideline1"
+        android:text="Category"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="40dp"
+        style="@style/contact_us"
         app:layout_constraintTop_toTopOf="@id/guideline2"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline3"
-        app:layout_constraintRight_toRightOf="@+id/guideline4"
-
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/full_name_ed"
+        android:layout_marginLeft="80dp"
         />
 
-    <ImageView
-        android:layout_width="wrap_content"
+
+    <EditText
+        android:id="@+id/full_name_ed"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/right_mark"
-        app:layout_constraintBottom_toBottomOf="@+id/guideline1"
+        android:background="@drawable/rounded_edittext_background"
+        android:padding="15dp"
+        android:layout_marginTop="80dp"
+        android:hint="Hardware"
         app:layout_constraintTop_toTopOf="@id/guideline2"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline3"
-        app:layout_constraintRight_toRightOf="@+id/guideline4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:layout_marginStart="40dp"
+        style="@style/contact_us"
+        app:layout_constraintTop_toTopOf="@id/full_name_ed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/email_ed"
+        android:layout_marginLeft="80dp"
+        />
+
+
+    <EditText
+        android:id="@+id/email_ed"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edittext_background"
+        android:padding="15dp"
+        android:layout_marginTop="95dp"
+        android:hint="Your Title"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintTop_toTopOf="@id/full_name_ed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
 
         />
 
     <TextView
-        android:id="@+id/success_fragment_title_tv"
+        style="@style/contact_us"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/successful_operation_tv"
-        style="@style/successful_operation_tv"
-        app:layout_constraintTop_toBottomOf="@id/guideline1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="40dp"
+        android:text="Message"
+        app:layout_constraintBottom_toTopOf="@+id/massage"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline4" />
+
+
+
+    <EditText
+        android:id="@+id/massage"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edittext_background2"
+        android:padding="60dp"
+        android:layout_marginTop="95dp"
+        android:hint="Give as many details as possible .."
+        app:layout_constraintBottom_toBottomOf="@id/guideline5"
+        app:layout_constraintTop_toTopOf="@id/email_ed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
 
         />
 
-    <TextView
-        android:id="@+id/reports_fragment_subtitle_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Your Problem has been sent"
-        style="@style/login_sub_title"
-        android:textSize="@dimen/_11ssp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/success_fragment_title_tv"
-        />
 
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_fragment_confirm_btn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/reports_fragment_subtitle_txt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/reports_screen"
-        app:layout_constraintBottom_toBottomOf="@id/click_to_return_txt"
-
-
-        />
-
-    <TextView
-        android:id="@+id/click_to_return_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click to return"
-        style="@style/login_sub_title"
-        android:textSize="@dimen/_11ssp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="@dimen/_30sdp"
-
+        style="@style/button_style"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:text="Submit"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginBottom="@dimen/_18sdp"
         />
 
 
