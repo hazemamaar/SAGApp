@@ -1,7 +1,7 @@
 package com.example.sagapp.alarm.ui.viewmodel
 
-import com.example.data.alarm.data.AlarmItem
-import com.example.data.alarm.domain.AlarmScheduler
+import com.example.data.alarm.AlarmItem
+import com.example.features.alarm.domain.AlarmScheduler
 import com.example.sagapp.android.Action
 import com.example.sagapp.android.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

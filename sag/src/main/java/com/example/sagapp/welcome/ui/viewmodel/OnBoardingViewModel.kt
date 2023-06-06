@@ -5,9 +5,9 @@ package com.example.sagapp.welcome.ui.viewmodel
 import androidx.lifecycle.viewModelScope
 import com.example.sagapp.android.Action
 import com.example.sagapp.android.BaseViewModel
-import com.example.sagapp.welcome.data.OnBoardPref
-import com.example.sagapp.welcome.data.OnBoardingData
-import com.example.sagapp.welcome.data.model.OnBoardingModel
+import com.example.data.welcom.data.OnBoardPref
+import com.example.data.welcom.data.OnBoardingData
+import com.example.data.welcom.model.OnBoardingModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -18,7 +18,7 @@ sealed class OnBoardingAction : Action {
 }
 
 @HiltViewModel
-class OnBoardingViewModel @Inject constructor(private val onBoardData: OnBoardingData,private val pref: OnBoardPref) : BaseViewModel<OnBoardingAction>() {
+class OnBoardingViewModel @Inject constructor(private val onBoardData: OnBoardingData, private val pref: OnBoardPref) : BaseViewModel<OnBoardingAction>() {
 
 
     fun getOnBoarding(){

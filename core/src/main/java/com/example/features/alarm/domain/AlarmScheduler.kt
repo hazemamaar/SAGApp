@@ -1,6 +1,6 @@
-package com.example.data.alarm.domain
+package com.example.features.alarm.domain
 
-import com.example.data.alarm.data.AlarmItem
+import com.example.data.alarm.AlarmItem
 
 interface AlarmScheduler {
     fun schedule(item: AlarmItem)

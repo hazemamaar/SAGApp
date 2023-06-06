@@ -1,4 +1,4 @@
-package com.example.sagapp.welcome.data
+package com.example.data.welcom.data
 
 import android.content.Context
 import android.util.Log

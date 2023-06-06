@@ -1,4 +1,4 @@
-package com.example.data.alarm.data
+package com.example.data.alarm
 
 import java.time.LocalDateTime
 

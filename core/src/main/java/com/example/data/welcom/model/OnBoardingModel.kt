@@ -1,4 +1,4 @@
-package com.example.sagapp.welcome.data.model
+package com.example.data.welcom.model
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes

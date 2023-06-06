@@ -1,7 +1,7 @@
 package com.example.sagapp.alarm.ui.fragments
 
 import androidx.fragment.app.viewModels
-import com.example.data.alarm.data.AlarmItem
+import com.example.data.alarm.AlarmItem
 import com.example.sagapp.alarm.ui.viewmodel.AlarmViewModel
 import com.example.sagapp.android.BaseFragment
 import com.example.sagapp.databinding.FragmentAlarmBinding

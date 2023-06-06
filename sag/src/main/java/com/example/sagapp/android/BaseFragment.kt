@@ -11,7 +11,6 @@ import com.example.sagapp.android.extentions.bindView
 
 
 abstract class BaseFragment<B : ViewBinding, VM : ViewModel> : Fragment() {
-
     abstract fun onFragmentReady()
 
     protected abstract val mViewModel: VM
