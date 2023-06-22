@@ -1,7 +1,7 @@
 package com.example.core.di
 
 import com.example.core.BuildConfig
-import com.example.data.authentcation.remote.service.AuthenticationServices
+import com.example.data.remote.remote.service.RemoteServices
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -42,12 +42,12 @@ object NetworkModule {
             .build()
 
     @Provides
-    fun providesApiService(okHttpClient: OkHttpClient): AuthenticationServices =
+    fun providesApiService(okHttpClient: OkHttpClient): RemoteServices =
         Retrofit.Builder()
             .run {
                 baseUrl(BuildConfig.BASE_URL)
                 client(okHttpClient)
                 addConverterFactory(GsonConverterFactory.create())
                 build()
-            }.create(AuthenticationServices::class.java)
+            }.create(RemoteServices::class.java)
 }

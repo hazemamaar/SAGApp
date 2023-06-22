@@ -2,7 +2,7 @@ package com.example.sagapp.authentication.ui.viewmodel
 
 import androidx.lifecycle.viewModelScope
 import com.example.core.response.Resource
-import com.example.data.authentcation.entities.ChangePasswordDto
+import com.example.data.remote.entities.ChangePasswordDto
 import com.example.features.authentication.domain.intractors.ChangePasswordUseCase
 import com.example.sagapp.android.Action
 import com.example.sagapp.android.BaseViewModel

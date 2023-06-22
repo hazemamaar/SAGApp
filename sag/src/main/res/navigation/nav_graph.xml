@@ -99,7 +99,7 @@
     </fragment>
     <fragment
         android:id="@+id/reportsFragment2"
-        android:name="com.example.sagapp.screens.ui.fragments.reportsFragment"
+        android:name="com.example.sagapp.screens.ui.fragments.ReportsFragment"
         android:label="fragment_reports"
         tools:layout="@layout/fragment_reports" >
         <action

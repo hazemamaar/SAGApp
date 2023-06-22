@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.sagapp.R
 
 
-class reportsFragment : Fragment() {
+class ReportsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

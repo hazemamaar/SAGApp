@@ -2,10 +2,10 @@ package com.example.sagapp.authentication.domain.mapper
 
 import com.example.core.base.BaseMapper
 import com.example.core.response.BaseResponse
-import com.example.data.authentcation.entities.GlassInfoDto
-import com.example.data.authentcation.entities.LoginDto
-import com.example.data.authentcation.entities.StripePaymentInfoDto
-import com.example.data.authentcation.entities.UserInfoDto
+import com.example.data.remote.entities.GlassInfoDto
+import com.example.data.remote.entities.LoginDto
+import com.example.data.remote.entities.StripePaymentInfoDto
+import com.example.data.remote.entities.UserInfoDto
 import com.example.sagapp.authentication.domain.model.GlassInfo
 import com.example.sagapp.authentication.domain.model.Login
 import com.example.sagapp.authentication.domain.model.StripePaymentInfo

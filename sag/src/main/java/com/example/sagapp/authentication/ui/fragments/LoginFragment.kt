@@ -2,7 +2,7 @@ package com.example.sagapp.authentication.ui.fragments
 
 import android.util.Log
 import androidx.fragment.app.viewModels
-import com.example.data.authentcation.entities.LoginParams
+import com.example.data.remote.entities.LoginParams
 import com.example.sagapp.R
 import com.example.sagapp.android.BaseFragment
 import com.example.sagapp.android.extentions.navigateSafe

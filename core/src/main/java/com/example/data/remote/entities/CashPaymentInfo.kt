@@ -1,4 +1,4 @@
-package com.example.data.authentcation.entities
+package com.example.data.remote.entities
 
 data class CashPaymentInfo(
     val address: String,

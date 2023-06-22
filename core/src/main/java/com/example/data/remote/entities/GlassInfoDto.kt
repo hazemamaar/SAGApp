@@ -1,4 +1,4 @@
-package com.example.data.authentcation.entities
+package com.example.data.remote.entities
 
 import com.google.gson.annotations.SerializedName
 

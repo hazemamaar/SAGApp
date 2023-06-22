@@ -2,7 +2,7 @@ package com.example.features.authentication.domain.intractors
 
 import com.example.core.response.BaseResponse
 import com.example.core.usecase.RemoteUseCase
-import com.example.data.authentcation.entities.ChangePasswordDto
+import com.example.data.remote.entities.ChangePasswordDto
 import com.example.features.authentication.data.repo.AuthenticationRepo
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

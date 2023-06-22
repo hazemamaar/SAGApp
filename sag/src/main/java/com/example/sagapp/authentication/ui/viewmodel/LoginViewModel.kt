@@ -2,8 +2,8 @@ package com.example.sagapp.authentication.ui.viewmodel
 
 import androidx.lifecycle.viewModelScope
 import com.example.core.response.Resource
-import com.example.data.authentcation.entities.LoginDto
-import com.example.data.authentcation.entities.LoginParams
+import com.example.data.remote.entities.LoginDto
+import com.example.data.remote.entities.LoginParams
 import com.example.features.authentication.domain.intractors.LoginUseCase
 import com.example.sagapp.android.Action
 import com.example.sagapp.android.BaseViewModel
