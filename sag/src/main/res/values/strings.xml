@@ -16,9 +16,7 @@
     <string name="Splash_Sag_Image">Splash Image</string>
     <string name="first_onboard_screen">How to use SAG</string>
 
-    <string name="first_onboard_page">Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry\'s standard </string>
-    <string name="second_onboard_page">Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry\'s standard</string>
-    <string name="third_onboard_page">Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry\'s standard</string>
+
     <string name="skip_btn">SKIP</string>
     <string name="next_btn">NEXT</string>
     <string name="img_onboard_rv">Onboard Image</string>

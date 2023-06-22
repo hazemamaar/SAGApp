@@ -6,14 +6,14 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sagapp.databinding.ItemOnboardingBinding
-import com.example.sagapp.welcome.data.model.OnBoardingModel
+import com.example.data.welcom.model.OnBoardingModel
 import javax.inject.Inject
 
 class OnBoardAdapter @Inject constructor() : RecyclerView.Adapter<OnBoardAdapter.OnBoardViewHolder>() {
 
     inner class OnBoardViewHolder(private val binding: ItemOnboardingBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item:OnBoardingModel){
+        fun bind(item: OnBoardingModel){
             binding.imageView.setImageResource(item.welcomeImage)
             binding.splashtitle.setText(item.welcomeWord)
             binding.onboardRvDescriptionTxt.setText(item.welcomeText)

@@ -3,7 +3,7 @@ package com.example.sagapp.commands
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
-import com.example.data.alarm.data.AlarmItem
+import com.example.data.alarm.AlarmItem
 import com.example.sagapp.android.BaseActivity
 import com.example.sagapp.android.extentions.observe
 import com.example.sagapp.commands.data.remote.FireBaseCommand
@@ -33,8 +33,6 @@ class CommunicationActivity : BaseActivity<ActivityCommuncationBinding, Commands
         when (action) {
             is FireBaseCommand.ReadCommand -> {
                 Log.e("firebase", "handleUiState: "+action.message )
-                mViewModel.scheduleAlarm(AlarmItem( time = LocalDateTime.now()
-                    .plusSeconds(action.message.toLong()),"hazem"))
             }
         }
     }

@@ -1,9 +1,9 @@
-package com.example.sagapp.welcome.di
+package com.example.core.di
 
 import android.content.Context
-import com.example.sagapp.welcome.data.OnBoardPref
-import com.example.sagapp.welcome.data.OnBoardPrefImpl
-import com.example.sagapp.welcome.data.PreDataStore
+import com.example.data.welcom.data.OnBoardPref
+import com.example.data.welcom.data.OnBoardPrefImpl
+import com.example.data.welcom.data.PreDataStore
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,7 +13,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class DataStoreModule  {
+object DataStoreModule  {
 
     @Singleton
     @Provides
@@ -23,7 +23,7 @@ class DataStoreModule  {
 
     @Provides
     @Singleton
-    fun dataStoreManager(@ApplicationContext appContext: Context):PreDataStore =
+    fun dataStoreManager(@ApplicationContext appContext: Context): PreDataStore =
         PreDataStore(appContext)
 
     @Provides

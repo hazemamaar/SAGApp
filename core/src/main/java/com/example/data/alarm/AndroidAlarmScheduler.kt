@@ -1,4 +1,4 @@
-package com.example.data.alarm.data
+package com.example.data.alarm
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -6,7 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.annotation.RequiresApi
-import com.example.data.alarm.domain.AlarmScheduler
+import com.example.features.alarm.domain.AlarmScheduler
 
 import java.time.ZoneId
 
