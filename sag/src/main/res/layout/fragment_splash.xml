@@ -30,4 +30,16 @@
         app:layout_constraintStart_toStartOf="@+id/imageSplash"
         app:layout_constraintTop_toBottomOf="@+id/imageSplash" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smart Assistant Glasses"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
